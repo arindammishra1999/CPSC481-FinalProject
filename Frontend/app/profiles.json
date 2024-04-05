@@ -1,0 +1,15 @@
+{
+    "users": [
+        {
+            "username": "cookRUser",
+            "password": "1234",
+            "expertiseLevel": "Beginner"
+        },
+        {
+            "username": "exampleUser2",
+            "password": "examplePassword2",
+            "expertiseLevel": "Pro"
+        }
+    ],
+    "dataTitle": "Users JSON"
+}

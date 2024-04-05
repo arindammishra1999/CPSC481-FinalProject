@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://apis.google.com/js/platform.js"
+            async
+            defer
+        ></script>
+        <meta
+            name="google-signin-client_id"
+            content="855494433310-pe3t40v0apt0khb33hb3tbmpbi0ab0f1.apps.googleusercontent.com"
+        />
+        <title>Login</title>
+        <link rel="stylesheet" href="/styles/login.css" />
+    </head>
+    <body>
+        <div class="container">
+            <img src="/cookrLogo.png" alt="App Logo" class="logo" />
+            <form class="login-form">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required />
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        required
+                    />
+                </div>
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+                <div class="g-signin-container">
+                    <div
+                        class="g-signin2"
+                        data-onsuccess="onSignIn"
+                        data-scope="profile"
+                    ></div>
+                    <button
+                        type="button"
+                        id="guestButton"
+                        onclick="loginAsGuest()"
+                    >
+                        Log in as Guest
+                    </button>
+                </div>
+            </form>
+        </div>
+        <script src="login.js" defer></script>
+        <script>
+            function onSignIn(googleUser) {
+                var profile = googleUser.getBasicProfile();
+                console.log("ID: " + profile.getId()); // Do something with the user's ID
+                console.log("Name: " + profile.getName()); // Do something with the user's name
+                console.log("Image URL: " + profile.getImageUrl()); // Do something with the user's image URL
+                console.log("Email: " + profile.getEmail()); // Do something with the user's email
+            }
+        </script>
+    </body>
+</html>
