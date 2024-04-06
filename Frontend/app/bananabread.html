@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+<link rel="stylesheet" href="ingredients.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recipe Viewer</title>
+<style>
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="image-container">
+        <img id="recipe-image" src="https://sallysbakingaddiction.com/wp-content/uploads/2018/10/homemade-banana-bread-1024x1536.jpg" alt="Recipe Image" width="500px" height="500px">
+    </div>
+    <div class="ingredient-list">
+        <h1>Banana Bread</h1>
+        <p>Servings:</p>
+        <div id="btn-container-2">
+            <button id="decrease-btn">-</button>
+            <input type="number" id="quantity" value="1" min="0.25" title="Adjust servings for desired quantity." disabled>
+            <button id="increase-btn">+</button>
+        </div>
+        <p id="total">1 Banana Bread</p>
+        <ul id="ingredient-list">
+            <li class="checkbox"><input type="checkbox" id="ingredient1"><label for="ingredient1" class="checkbox-custom"></label> <span id="ingredient1-quantity">2</span> cup(s) all-purpose flour</li>
+            <li class="checkbox"><input type="checkbox" id="ingredient2"><label for="ingredient2" class="checkbox-custom"></label> <span id="ingredient2-quantity">1</span> teaspoon(s) baking soda</li>
+            <li class="checkbox"><input type="checkbox" id="ingredient3"><label for="ingredient3" class="checkbox-custom"></label> <span id="ingredient3-quantity">0.25</span> teaspoon(s) salt</li>
+            <li class="checkbox"><input type="checkbox" id="ingredient4"><label for="ingredient4" class="checkbox-custom"></label> <span id="ingredient4-quantity">0.5</span> teaspoon(s) ground cinnamon</li>
+            <li class="checkbox"><input type="checkbox" id="ingredient5"><label for="ingredient5" class="checkbox-custom"></label> <span id="ingredient5-quantity">0.5</span> cup(s) unsalted butter</li>
+            <li class="checkbox"><input type="checkbox" id="ingredient6"><label for="ingredient6" class="checkbox-custom"></label> <span id="ingredient6-quantity">0.75</span> cup(s) packed light or dark brown sugar</li>
+            <li class="checkbox"><input type="checkbox" id="ingredient7"><label for="ingredient7" class="checkbox-custom"></label> <span id="ingredient7-quantity">2</span> large egg(s)</li>
+            <li class="checkbox"><input type="checkbox" id="ingredient8"><label for="ingredient8" class="checkbox-custom"></label> <span id="ingredient8-quantity">0.25</span> cup(s) plain yogurt</li>
+            <li class="checkbox"><input type="checkbox" id="ingredient9"><label for="ingredient9" class="checkbox-custom"></label> <span id="ingredient9-quantity">2</span> cup(s) mashed bananas</li>
+            <li class="checkbox"><input type="checkbox" id="ingredient10"><label for="ingredient10" class="checkbox-custom"></label> <span id="ingredient10-quantity">1</span> teaspoon(s) pure vanilla extract</li>
+        </ul>    
+    </div>
+</div>
+
+<div id="btn-container">
+    <button id="prev-btn">Previous</button>
+    <button id="next-btn" disabled>Next</button>
+</div>
+
+<script src="bananabread.js"></script>
+</body>
+</html>

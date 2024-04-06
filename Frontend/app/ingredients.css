@@ -36,14 +36,13 @@ body {
 ul {
     list-style: none;
     padding: 0px;
-    display: flex;
 }
 
 li {
     padding-left: 20px;
     padding-right: 20px;
     font-size: 17px;
-    text-align: center;
+    text-align: left;
 }
 
 .checkbox {
@@ -91,7 +90,7 @@ h1 {
     text-align: center;
 }
 
-#total-cookies {
+#total {
     padding-bottom: 20px;
 }
 
