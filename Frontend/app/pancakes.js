@@ -53,16 +53,13 @@ previousButton.addEventListener("click", () => {
 
 function updateIngredientQuantities() {
     const ingredientQuantities = [
-        1, // salted butter
-        1, // granulated sugar
-        1, // light brown sugar
-        2, // pure vanilla extract
-        2, // large eggs
-        3, // all-purpose flour
-        1, // baking soda
-        0.5, // baking powder
-        1, // sea salt
-        2 // chocolate chips
+        1.5,
+        3.5,
+        1,
+        0.25,
+        1.25,
+        3,
+        1
     ];
         
     const ingredients = document.querySelectorAll('.checkbox');
@@ -71,8 +68,8 @@ function updateIngredientQuantities() {
         quantitySpan.innerText = ingredientQuantities[index] * quantity;
     });
 
-    const totalCookies = document.getElementById('total-cookies');
-    totalCookies.innerText = (36 * quantity) + ' Cookies';
+    const total = document.getElementById('total');
+    total.innerText = (8 * quantity) + ' Pancakes';
 }
 
 // Initial call to update ingredient quantities

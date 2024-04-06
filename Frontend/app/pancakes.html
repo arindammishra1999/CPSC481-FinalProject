@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+<link rel="stylesheet" href="ingredients.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recipe Viewer</title>
+<style>
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="image-container">
+        <img id="recipe-image" src="https://www.allrecipes.com/thmb/SsL-e_0gTwoUa3ek_AVASUXritc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/21014-Good-old-Fashioned-Pancakes-mfs_002-0e249c95678f446291ebc9408ae64c05.jpg" alt="Recipe Image" width="500px" height="500px">
+    </div>
+    <div class="ingredient-list">
+        <h1>Pancakes</h1>
+        <p>Servings:</p>
+        <div id="btn-container-2">
+            <button id="decrease-btn">-</button>
+            <input type="number" id="quantity" value="1" min="0.25" title="Adjust servings for desired quantity." disabled>
+            <button id="increase-btn">+</button>
+        </div>
+        <p id="total">8 Pancakes</p>
+        <ul id="ingredient-list">
+            <li class="checkbox"><input type="checkbox" id="ingredient1"><label for="ingredient1" class="checkbox-custom"></label> <span id="ingredient1-quantity">1.5</span> cup(s) all-purpose flour</li>
+            <li class="checkbox"><input type="checkbox" id="ingredient2"><label for="ingredient2" class="checkbox-custom"></label> <span id="ingredient2-quantity">3.5</span> teaspoon(s) baking powder</li>
+            <li class="checkbox"><input type="checkbox" id="ingredient3"><label for="ingredient3" class="checkbox-custom"></label> <span id="ingredient3-quantity">1</span> tablespoon(s) white sugar</li>
+            <li class="checkbox"><input type="checkbox" id="ingredient4"><label for="ingredient4" class="checkbox-custom"></label> <span id="ingredient4-quantity">0.25</span> teaspoon(s) salt</li>
+            <li class="checkbox"><input type="checkbox" id="ingredient5"><label for="ingredient5" class="checkbox-custom"></label> <span id="ingredient5-quantity">1.25</span> cup(s) milk</li>
+            <li class="checkbox"><input type="checkbox" id="ingredient6"><label for="ingredient6" class="checkbox-custom"></label> <span id="ingredient6-quantity">3</span> tablespoon(s) melted butter</li>
+            <li class="checkbox"><input type="checkbox" id="ingredient7"><label for="ingredient7" class="checkbox-custom"></label> <span id="ingredient7-quantity">1</span> egg(s)</li>
+        </ul>    
+    </div>
+</div>
+
+<div id="btn-container">
+    <button id="prev-btn">Previous</button>
+    <button id="next-btn" disabled>Next</button>
+</div>
+
+<script src="pancakes.js"></script>
+</body>
+</html>
