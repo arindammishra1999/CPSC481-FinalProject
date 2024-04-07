@@ -5,11 +5,19 @@ const increaseButton = document.getElementById("increase-btn");
 const checkboxes = document.querySelectorAll('.checkbox input[type="checkbox"]');
 const nextButton = document.getElementById("next-btn");
 const previousButton = document.getElementById("prev-btn");
+const selectAllCheckbox = document.getElementById("select-all");
 
 function updateButtonsState() {
     decreaseButton.disabled = (quantity == 0.25); 
     increaseButton.disabled = (quantity == 10);
 }
+
+selectAllCheckbox.addEventListener("change", () => {
+    checkboxes.forEach((checkbox) => {
+        checkbox.checked = selectAllCheckbox.checked;
+    });
+    checkCheckboxes();
+});
 
 decreaseButton.addEventListener("click", () => {
     if (quantity > 1) quantity--;
