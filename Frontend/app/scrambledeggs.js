@@ -44,7 +44,7 @@ function checkCheckboxes() {
 }
 
 nextButton.addEventListener("click", () => {
-    window.location.href = "recipe.html";
+    window.location.href = "scrambledEggsRecipe.html";
 });
 
 previousButton.addEventListener("click", () => {

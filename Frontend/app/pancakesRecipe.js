@@ -15,7 +15,13 @@ function strikeThrough() {
 }
 
 previousButton.addEventListener("click", () => {
-    window.location.href = "chocolatechip.html";
+    window.location.href = "pancakes.html";
 });
 
+const favoriteButton = document.getElementById("favorite-btn");
 
+favoriteButton.addEventListener("click", toggleFavorite);
+
+function toggleFavorite() {
+    favoriteButton.classList.toggle("favorite");
+}

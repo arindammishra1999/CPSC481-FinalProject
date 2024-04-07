@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Recipe</title>
+        <link rel="stylesheet" href="recipe.css" />
+    </head>
+    <body>
+        <div class="heart-container">
+            <button id="favorite-btn" class="heart">
+                <span class="tooltip">Add recipe to favorites</span>
+            </button>
+        </div>
+        <div class="container">
+            <div class="image-container">
+                <img id="recipe-image" src="https://sallysbakingaddiction.com/wp-content/uploads/2018/10/homemade-banana-bread-1024x1536.jpg" alt="Recipe Image" width="700px" height="500px">
+            </div>
+            <div class="recipe-details">
+                <h1>Banana Bread</h1>
+                <h2>Recipe Steps</h2>
+                <ol class="steps">
+                    <li>
+                        <h3>1. Preheat the oven and prepare the pan:</h3>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="step1" />
+                                <label for="step1"
+                                    >Adjust the oven rack to the lower third position and preheat the oven to 350°F (177°C).</label
+                                >
+                            </li>
+                            <li>
+                                <input type="checkbox" id="step2" />
+                                <label for="step2"
+                                    > Grease a metal 9×5-inch loaf pan with nonstick spray.</label
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>2. Prepare the dry ingredients:</h3>
+                        <ul>
+                        
+                            <li>
+                                <input type="checkbox" id="step7" />
+                                <label for="step7"
+                                    >Whisk the flour, baking soda, salt, and cinnamon together in a medium bowl. Set aside.</label
+                                >
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <h3>3. Prepare the wet ingredients:</h3>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="step7" />
+                                <label for="step7"
+                                    >Using a handheld or stand mixer fitted with a paddle or whisk attachment, beat the butter and brown sugar together until smooth and creamy.</label
+                                >
+                            </li>
+                            <li>
+                                <input type="checkbox" id="step7" />
+                                <label for="step7"
+                                    > Add the eggs, yogurt, mashed bananas, and vanilla extract. Beat until combined.</label
+                                >
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <h3>4. Combine the wet and dry ingredients:</h3>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="step10" />
+                                <label for="step1"
+                                    >Slowly beat the dry ingredients into the wet ingredients until no flour pockets remain. Fold in the nuts, if using.</label
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>5. Bake the banana bread:</h3>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="step13" />
+                                <label for="step4"
+                                    >Pour and spread the batter into the prepared baking pan. Bake for 60–65 minutes, covering loosely with aluminum foil halfway through. The bread is done when a toothpick inserted in the center comes out clean.</label
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>6. Cool and store:</h3>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="step13" />
+                                <label for="step4"
+                                    >Allow the bread to cool in the pan for 1 hour, then transfer to a wire rack to cool completely. Store banana bread at room temperature for 2 days or in the refrigerator for up to 1 week.</label
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            <div id="btn-container">
+                <button id="prev-btn">Previous</button>
+            </div>
+        </div>
+        <script src="bananaBreadRecipe.js"></script>
+    </body>
+</html>
