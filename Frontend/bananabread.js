@@ -5,11 +5,19 @@ const increaseButton = document.getElementById("increase-btn");
 const checkboxes = document.querySelectorAll('.checkbox input[type="checkbox"]');
 const nextButton = document.getElementById("next-btn");
 const previousButton = document.getElementById("prev-btn");
+const selectAllCheckbox = document.getElementById("select-all");
 
 function updateButtonsState() {
     decreaseButton.disabled = (quantity == 0.25); 
     increaseButton.disabled = (quantity == 10);
 }
+
+selectAllCheckbox.addEventListener("change", () => {
+    checkboxes.forEach((checkbox) => {
+        checkbox.checked = selectAllCheckbox.checked;
+    });
+    checkCheckboxes();
+});
 
 decreaseButton.addEventListener("click", () => {
     if (quantity > 1) quantity--;
@@ -44,7 +52,7 @@ function checkCheckboxes() {
 }
 
 nextButton.addEventListener("click", () => {
-    window.location.href = "recipe.html";
+    window.location.href = "bananaBreadRecipe.html";
 });
 
 previousButton.addEventListener("click", () => {
@@ -53,13 +61,16 @@ previousButton.addEventListener("click", () => {
 
 function updateIngredientQuantities() {
     const ingredientQuantities = [
-        1.5,
-        3.5,
-        1,
-        0.25,
-        1.25,
-        3,
-        1
+        2, 
+        1, 
+        0.25, 
+        0.5, 
+        0.5, 
+        0.75, 
+        2, 
+        0.25, 
+        2, 
+        1 
     ];
         
     const ingredients = document.querySelectorAll('.checkbox');
@@ -69,7 +80,7 @@ function updateIngredientQuantities() {
     });
 
     const total = document.getElementById('total');
-    total.innerText = (8 * quantity) + ' Pancakes';
+    total.innerText = (1 * quantity) + ' Banana Bread';
 }
 
 // Initial call to update ingredient quantities

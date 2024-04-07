@@ -1,0 +1,189 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6ead4;
+    font-family: "Cabin", sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+
+#recipe-image {
+    width: 63%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.recipe-details {
+    margin-left: 20px; /* Add margin for spacing */
+   
+    position: relative; /* Add position relative */
+    margin-right: 20px;
+}
+
+.steps {
+    margin-top: 10%; /* Increase margin-top for more spacing */
+    overflow-y: auto; /* Allow vertical scrolling */
+    max-height: calc(100vh - 300px);
+    list-style-type: decimal;
+    padding-left: 20px;
+    line-height: 2;
+    padding-right: 20px;
+}
+
+/* Add scrollbar indicator */
+.steps::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 8px; /* Width of the scrollbar indicator */
+    background-color: rgba(0, 0, 0, 0.5); /* Color of the scrollbar indicator */
+}
+
+.steps::-webkit-scrollbar {
+    width: 8px;
+}
+
+.steps::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+    width: 6px;
+}
+
+.steps::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.recipe-image img {
+    margin-top: 5%;
+    margin-right: 10%;
+    width: 70%;
+    height: auto;
+}
+.steps li {
+    list-style-type: none; /* Remove bullet points */
+    margin-left: 0; /* Remove default left margin */
+}
+.navigation {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.navigation button:hover {
+    background-color: #ddd;
+}
+
+#ListPara {
+    margin-bottom: 0%;
+    margin-top: 0%;
+    margin-left: 3.2%;
+}
+
+#btn-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+}
+
+#btn-container-2 {
+    margin-bottom: 0px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #479442;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.steps li label {
+    max-width: 700px; /* Adjust the maximum width as needed */
+    display: inline-block;
+    word-wrap: break-word;
+}
+
+.steps li input[type="checkbox"] {
+    vertical-align: top;
+    margin-top: 1.2%;
+}
+
+/* Add styles for the heart button */
+.heart-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.heart {
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    background-image: url('/Frontend/heart.svg'); /* Replace 'heart.svg' with the path to your heart-shaped image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.heart:hover {
+    background-image: url('/Frontend/heart-green.svg'); /* Replace 'heart-green.svg' with the path to your green heart-shaped image */
+}
+
+/* Add styles for the tooltip */
+.tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color:black;
+    color: whitesmoke;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    right: 70%;
+    margin-left: -60px;
+}
+
+.heart:hover .tooltip {
+    visibility: visible;
+}
+

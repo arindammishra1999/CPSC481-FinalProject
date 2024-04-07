@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pancake Recipe</title>
+    <link rel="stylesheet" href="recipe.css">
+</head>
+<body>
+    <div class="heart-container">
+        <button id="favorite-btn" class="heart">
+            <span class="tooltip">Add recipe to favorites</span>
+        </button>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img id="recipe-image" src="https://www.allrecipes.com/thmb/SsL-e_0gTwoUa3ek_AVASUXritc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/21014-Good-old-Fashioned-Pancakes-mfs_002-0e249c95678f446291ebc9408ae64c05.jpg" alt="Recipe Image" width="700px" height="500px">
+        </div>
+        <div class="recipe-details">
+            <h1>Pancakes</h1>
+            <h2>Recipe Steps</h2>
+            <ol class="steps">
+                <li>
+                    <h3>1. Prepare the batter:</h3>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="step1" />
+                            <label for="step1">Sift flour, baking powder, sugar, and salt together in a large bowl. Make a well in the center and add milk, melted butter, and egg; mix until smooth.</label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>2. Cook the pancakes:</h3>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="step2" />
+                            <label for="step2">Heat a lightly oiled griddle or pan over medium-high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake; cook until bubbles form and the edges are dry, about 2 to 3 minutes.</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step3" />
+                            <label for="step3">Flip and cook until browned on the other side. Repeat with remaining batter.</label>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+        <div id="btn-container">
+            <button id="prev-btn">Previous</button>
+        </div>
+    </div>
+    <script src="pancakesRecipe.js"></script>
+</body>
+</html>

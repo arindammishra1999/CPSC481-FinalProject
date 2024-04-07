@@ -4,16 +4,21 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Recipe</title>
-        <link rel="stylesheet" href="/styles/recipe.css" />
+        <link rel="stylesheet" href="recipe.css" />
     </head>
     <body>
-        <h1>Chocolate Chip Cookies</h1>
-        <h2>Recipe Steps</h2>
+        <div class="heart-container">
+            <button id="favorite-btn" class="heart">
+                <span class="tooltip">Add recipe to favorites</span>
+            </button>
+        </div>
         <div class="container">
-            <div class="recipe-image">
-                <img src="/cookie.jpeg" alt="Chocolate Chip Cookies" />
+            <div class="image-container">
+                <img id="recipe-image" src="https://joyfoodsunshine.com/wp-content/uploads/2018/02/best-chocolate-chip-cookies-recipe-1.jpg" alt="Recipe Image" width="700px" height="500px">
             </div>
             <div class="recipe-details">
+                <h1>Chocolate Chip Cookies</h1>
+                <h2>Recipe Steps</h2>
                 <ol class="steps">
                     <li>
                         <h3>1. Make the chocolate chip cookie dough:</h3>
@@ -97,21 +102,21 @@
                         <h3>3. Bake the cookies:</h3>
                         <ul>
                             <li>
-                                <input type="checkbox" id="step1" />
+                                <input type="checkbox" id="step10" />
                                 <label for="step1"
                                     >For fresh dough: Roll dough into balls and
                                     place on a baking sheet.</label
                                 >
                             </li>
                             <li>
-                                <input type="checkbox" id="step2" />
+                                <input type="checkbox" id="step11" />
                                 <label for="step2"
                                     >Bake at 375°F for 8-10 minutes, do not
                                     over-bake.</label
                                 >
                             </li>
                             <li>
-                                <input type="checkbox" id="step3" />
+                                <input type="checkbox" id="step12" />
                                 <label for="step3"
                                     >Cookies will be slightly doughy when
                                     removed from the oven, but will set as they
@@ -124,7 +129,7 @@
                         <h3>4. Cool and store:</h3>
                         <ul>
                             <li>
-                                <input type="checkbox" id="step4" />
+                                <input type="checkbox" id="step13" />
                                 <label for="step4"
                                     >Thaw first: Thaw on a baking sheet at room
                                     temperature for 1-2 hours, then bake at
@@ -132,7 +137,7 @@
                                 >
                             </li>
                             <li>
-                                <input type="checkbox" id="step5" />
+                                <input type="checkbox" id="step14" />
                                 <label for="step5"
                                     >Bake from frozen: Preheat oven to 350°F,
                                     place frozen dough on a sheet, and bake for
@@ -140,7 +145,7 @@
                                 >
                             </li>
                             <li>
-                                <input type="checkbox" id="step6" />
+                                <input type="checkbox" id="step15" />
                                 <label for="step6"
                                     >Cool cookies on the sheet for 5 minutes
                                     before transferring to a wire rack to cool
@@ -148,7 +153,7 @@
                                 >
                             </li>
                             <li>
-                                <input type="checkbox" id="step7" />
+                                <input type="checkbox" id="step16" />
                                 <label for="step7"
                                     >Store in an airtight container at room
                                     temperature for up to 5 days or freeze for
@@ -159,7 +164,10 @@
                     </li>
                 </ol>
             </div>
+            <div id="btn-container">
+                <button id="prev-btn">Previous</button>
+            </div>
         </div>
-        <script src="recipe.js"></script>
+        <script src="chocolateChipRecipe.js"></script>
     </body>
 </html>

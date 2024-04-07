@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrambled Eggs Recipe</title>
+    <link rel="stylesheet" href="recipe.css">
+</head>
+<body>
+    <div class="heart-container">
+        <button id="favorite-btn" class="heart">
+            <span class="tooltip">Add recipe to favorites</span>
+        </button>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img id="recipe-image" src="https://cdn.loveandlemons.com/wp-content/uploads/2021/05/scrambled-eggs-580x580.jpg" alt="Recipe Image" width="700px" height="500px">
+        </div>
+        <div class="recipe-details">
+            <h1>Scrambled Eggs</h1>
+            <h2>Recipe Steps</h2>
+            <ol class="steps">
+                <li>
+                    <h3>1. Prepare the eggs:</h3>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="step1" />
+                            <label for="step1">Crack the eggs into a medium bowl and add the milk or water. Whisk until smooth and combined, with no streaks of egg white remaining.</label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>2. Heat the skillet:</h3>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="step2" />
+                            <label for="step2">Brush a small nonstick skillet with olive oil, or melt a little butter in a small nonstick skillet. Bring to medium heat.</label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>3. Cook the eggs:</h3>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="step3" />
+                            <label for="step3">Pour in the eggs, and let them cook for a few seconds without stirring. Pull a rubber spatula across the bottom of the pan to form large, soft curds of scrambled eggs.</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step4" />
+                            <label for="step4">Continue cooking over medium-low heat, folding and stirring the eggs every few seconds. Scrape the spatula along the bottom and sides of the pan often to form more curds and to prevent any part of the eggs from drying out.</label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>4. Finish and season:</h3>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="step5" />
+                            <label for="step5">Remove the pan from the heat when the eggs are mostly set, but a little liquid egg remains. Season to taste with salt and pepper and garnish with chopped fresh chives, if desired.</label>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+        <div id="btn-container">
+            <button id="prev-btn">Previous</button>
+        </div>
+    </div>
+    <script src="scrambledEggsRecipe.js"></script>
+</body>
+</html>
