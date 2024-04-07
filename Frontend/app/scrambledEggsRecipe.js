@@ -15,7 +15,5 @@ function strikeThrough() {
 }
 
 previousButton.addEventListener("click", () => {
-    window.location.href = "chocolatechip.html";
+    window.location.href = "scrambledeggs.html";
 });
-
-
