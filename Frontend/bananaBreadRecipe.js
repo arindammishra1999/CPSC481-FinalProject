@@ -3,8 +3,21 @@ const previousButton = document.getElementById("prev-btn");
 const nextButton = document.getElementById("next-btn");
 const homeButton = document.getElementById("home-btn");
 
-checkboxes.forEach(checkbox => {
-    checkbox.addEventListener("change", checkCheckboxes);
+checkboxes.forEach((checkbox, index) => {
+    checkbox.addEventListener("change", () => {
+        if (checkbox.checked) {
+            // Check all the checkboxes above the clicked checkbox
+            for (let i = 0; i < index; i++) {
+                checkboxes[i].checked = true;
+            }
+        } else {
+            // Uncheck all the checkboxes below the clicked checkbox
+            for (let i = index + 1; i < checkboxes.length; i++) {
+                checkboxes[i].checked = false;
+            }
+        }
+        checkCheckboxes();
+    });
 });
 
 function checkCheckboxes() {
