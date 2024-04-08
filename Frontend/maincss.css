@@ -48,6 +48,16 @@ h1 {
     cursor: pointer;
 }
 
+.filter-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-options label {
+    margin: 0 10px;
+}
+
 main {
     padding: 20px;
     display: flex;
