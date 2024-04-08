@@ -1,65 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Recipes</title>
-        <link rel="stylesheet" href="maincss.css" />
-    </head>
-    <body>
-        <header>
-            <div class="search-bar">
-                <img src="10.png" alt="Recipe image" />
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Search" />
-                <button>Search</button>
-            </div>
-            <button class="filter">Filter</button>
-        </header>
-        <main>
-            <div class="recipe-card">
-                <img src="1.jpeg" alt="Recipe image" />
-                <h2>Chocolate Chip Cookies</h2>
-                <p>
-                    This is the best chocolate chip cookies recipe ever! No funny ingredients, no chilling time, etc. Just a simple, straightforward, amazingly delicious, doughy yet still fully cooked, chocolate chip cookie that turns out perfectly every single time! 
-                </p>
-            </div>
-            <div class="recipe-card">
-                <img src="2.jpeg" alt="Recipe image" />
-                <h2>Zucchini Banana Bread</h2>
-                <p>
-                    This easy zucchini banana bread is studded with chocolate chips and packed with flavor! Enjoy it warm from the oven, or freeze a loaf for later!
-                </p>
-            </div>
-            <div class="recipe-card">
-                <img src="11.jpeg" alt="Recipe image" />
-                <h2>French Toast</h2>
-                <p>
-                    There's rarely a day This fabulous French toast recipe works with many types of bread — white, whole wheat, brioche, cinnamon-raisin, Italian, or French! Delicious served hot with butter and maple syrup.in the summer when there aren't hot dogs in my refrigerator.
-                </p>
-            </div>
-            <div class="recipe-card">
-                <img src="3.jpeg" alt="Recipe image" />
-                <h2>Good Old-Fashioned Pancakes</h2>
-                <p>
-                    Perfect pancakes are easier to make than you think. This pancake recipe produces thick, fluffy, and all-around delicious pancakes with just a few ingredients that are probably already in your kitchen (and it's so much better than the boxed stuff).
-                </p>
-            </div>
-            <div class="recipe-card">
-                <img src="6.jpeg" alt="Recipe image" />
-                <h2>Best Apple Pie</h2>
-                <p>
-                    Our best recipe for making a classic homemade apple pie. Our recipe guarantees apple pie with perfectly cooked, not mushy, apples surrounded by a thickened and deliciously spiced sauce, all baked inside a flaky, golden-brown pie crust.
-                </p>
-            </div>
-            <div class="recipe-card">
-                <img src="4.jpeg" alt="Recipe image" />
-                <h2>Perfect Chocolate Crepes</h2>
-                <p>
-                    Chocolate crepes that are easy to make and will guarantee perfect results every time!
-                </p>
-            </div>
-        </main>
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes</title>
+    <link rel="stylesheet" href="maincss.css" />
+</head>
+<body>
+    <header>
+        <div class="search-bar">
+            <img src="10.png" alt="Recipe image" />
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search" />
+            <button>Search</button>
+        </div>
+        <div class="filter-options">
+            <input type="checkbox" id="dessert" name="category" />
+            <label for="dessert">Dessert</label>
+            <input type="checkbox" id="bread" name="category" />
+            <label for="bread">Bread</label>
+            <input type="checkbox" id="breakfast" name="category" />
+            <label for="breakfast">Breakfast</label>
+        </div>
+        <button class="filter">Filter</button>
+    </header>
+    <main>
+        <div class="recipe-card" data-category="dessert">
+            <img src="1.jpeg" alt="Recipe image" />
+            <h2>Chocolate Chip Cookies</h2>
+            <p>This is the best chocolate chip cookies recipe ever! No funny ingredients, no chilling time, etc...</p>
+        </div>
+        <div class="recipe-card" data-category="bread">
+            <img src="2.jpeg" alt="Recipe image" />
+            <h2>Zucchini Banana Bread</h2>
+            <p>This easy zucchini banana bread is studded with chocolate chips and packed with flavor...</p>
+        </div>
+        <div class="recipe-card" data-category="breakfast">
+            <img src="11.jpeg" alt="Recipe image" />
+            <h2>French Toast</h2>
+            <p>There's rarely a day this fabulous French toast recipe doesn't make a perfect breakfast...</p>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkboxes = document.querySelectorAll('.filter-options input[type=checkbox]');
+            checkboxes.forEach(box => {
+                box.addEventListener('change', filterRecipes);
+            });
+
+            function filterRecipes() {
+                const checkedCategories = Array.from(checkboxes)
+                    .filter(i => i.checked)
+                    .map(i => i.id);
+                const recipes = document.querySelectorAll('.recipe-card');
+
+                recipes.forEach(card => {
+                    const category = card.dataset.category;
+                    if (checkedCategories.includes(category) || checkedCategories.length === 0) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
 </html>
