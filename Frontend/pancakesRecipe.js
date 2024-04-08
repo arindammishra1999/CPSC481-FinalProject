@@ -2,6 +2,7 @@ const checkboxes = document.querySelectorAll('.steps input[type="checkbox"]');
 const previousButton = document.getElementById("prev-btn");
 const nextButton = document.getElementById("next-btn");
 const homeButton = document.getElementById("home-btn");
+const favoriteButton = document.getElementById("favorite-btn");
 
 checkboxes.forEach((checkbox, index) => {
     checkbox.addEventListener("change", () => {
@@ -37,8 +38,6 @@ nextButton.addEventListener("click", () => {
 previousButton.addEventListener("click", () => {
     window.location.href = "pancakes.html";
 });
-
-const favoriteButton = document.getElementById("favorite-btn");
 
 favoriteButton.addEventListener("click", toggleFavorite);
 

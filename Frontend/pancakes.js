@@ -7,6 +7,7 @@ const nextButton = document.getElementById("next-btn");
 const previousButton = document.getElementById("prev-btn");
 const homeButton = document.getElementById("home-btn");
 const selectAllCheckbox = document.getElementById("select-all");
+const favoriteButton = document.getElementById("favorite-btn");
 
 function updateButtonsState() {
     decreaseButton.disabled = (quantity == 0.25); 
@@ -66,6 +67,12 @@ previousButton.addEventListener("click", () => {
 homeButton.addEventListener("click", () => {
     window.location.href = "mainscreen.html";
 });
+
+favoriteButton.addEventListener("click", toggleFavorite);
+
+function toggleFavorite() {
+    favoriteButton.classList.toggle("favorite");
+}
 
 function updateIngredientQuantities() {
     const ingredientQuantities = [

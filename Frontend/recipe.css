@@ -216,6 +216,10 @@ button {
     background-image: url('heart-green.svg'); /* Replace 'heart-green.svg' with the path to your green heart-shaped image */
 }
 
+.heart.favorite {
+    background-image: url('heart-favorited.svg'); /* Favorited icon */
+}
+
 .home-container {
     position: absolute;
     top: 20px;
