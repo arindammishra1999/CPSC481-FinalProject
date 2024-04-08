@@ -7,6 +7,11 @@
         <link rel="stylesheet" href="recipe.css" />
     </head>
     <body>
+        <div class="home-container">
+            <button id="home-btn" class="home">
+                <span class="tooltip">Return to recipe list</span>
+            </button>
+        </div>
         <div class="heart-container">
             <button id="favorite-btn" class="heart">
                 <span class="tooltip">Add recipe to favorites</span>
@@ -14,7 +19,7 @@
         </div>
         <div class="container">
             <div class="image-container">
-                <img id="recipe-image" src="https://joyfoodsunshine.com/wp-content/uploads/2018/02/best-chocolate-chip-cookies-recipe-1.jpg" alt="Recipe Image" width="700px" height="500px">
+                <img id="recipe-image" src="https://brokenovenbaking.com/wp-content/uploads/2020/11/edible-chocolate-chip-cookie-dough-15.jpg" alt="Recipe Image" width="700px" height="500px">
             </div>
             <div class="recipe-details">
                 <h1>Chocolate Chip Cookies</h1>
@@ -23,48 +28,42 @@
                     <li>
                         <h3>1. Make the chocolate chip cookie dough:</h3>
                         <ul>
-                            <li>
+                            <li class="checkbox">
                                 <input type="checkbox" id="step1" />
-                                <label for="step1"
-                                    >Combine dry ingredients in a medium
-                                    bowl.</label
-                                >
+                                <label for="step1" class="checkbox-custom"></label>
+                                    Combine dry ingredients in a medium
+                                    bowl.
                             </li>
-                            <li>
+                            <li class="checkbox">
                                 <input type="checkbox" id="step2" />
-                                <label for="step2"
-                                    >Measure flour correctly using a measuring
+                                <label for="step2" class="checkbox-custom"></label>
+                                    Measure flour correctly using a measuring
                                     cup for dry ingredients and leveling with a
-                                    knife.</label
-                                >
+                                    knife.
                             </li>
-                            <li>
+                            <li class="checkbox">
                                 <input type="checkbox" id="step3" />
-                                <label for="step3"
-                                    >Cream together softened butter and
-                                    sugars.</label
-                                >
+                                <label for="step3" class="checkbox-custom"></label>
+                                    Cream together softened butter and
+                                    sugars.
                             </li>
-                            <li>
+                            <li class="checkbox">
                                 <input type="checkbox" id="step4" />
-                                <label for="step4"
-                                    >Add eggs and vanilla, then beat to
-                                    combine.</label
-                                >
+                                <label for="step4" class="checkbox-custom"></label>
+                                    Add eggs and vanilla, then beat to
+                                    combine.
                             </li>
-                            <li>
+                            <li class="checkbox">
                                 <input type="checkbox" id="step5" />
-                                <label for="step5"
-                                    >Add dry ingredients and stir until just
-                                    combined.</label
-                                >
+                                <label for="step5" class="checkbox-custom"></label>
+                                    Add dry ingredients and stir until just
+                                    combined.
                             </li>
-                            <li>
+                            <li class="checkbox">
                                 <input type="checkbox" id="step6" />
-                                <label for="step6"
-                                    >Add chocolate chips and beat until evenly
-                                    distributed.</label
-                                >
+                                <label for="step6" class="checkbox-custom"></label>
+                                    Add chocolate chips and beat until evenly
+                                    distributed.
                             </li>
                         </ul>
                     </li>
@@ -72,93 +71,68 @@
                         <h3>2. Portion and roll dough:</h3>
                         <ul>
                         
-                            <li>
+                            <li class="checkbox">
                                 <input type="checkbox" id="step7" />
-                                <label for="step7"
-                                    >Use a cookie scoop to ensure uniform size
-                                    for even baking.</label
-                                >
-                            </li>
-                            <p id="ListPara">Optionally, freeze the dough:</p>
-                           
-                                <li>
-                                    <input type="checkbox" id="step8" />
-                                    <label for="step8"
-                                        >Flash-freeze cookie dough balls on a
-                                        baking sheet for 30 minutes.</label
-                                    >
-                                </li>
-                                <li>
-                                    <input type="checkbox" id="step9" />
-                                    <label for="step9"
-                                        >Transfer balls to an airtight container
-                                        and freeze for up to 2 months.</label
-                                    >
-                                </li>
+                                <label for="step7" class="checkbox-custom"></label>
+                                    Use a cookie scoop to ensure uniform size
+                                    for even baking.
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="checkbox">
                         <h3>3. Bake the cookies:</h3>
                         <ul>
-                            <li>
+                            <li class="checkbox">
                                 <input type="checkbox" id="step10" />
-                                <label for="step1"
-                                    >For fresh dough: Roll dough into balls and
-                                    place on a baking sheet.</label
-                                >
+                                <label for="step10" class="checkbox-custom"></label>
+                                    For fresh dough: Roll dough into balls and
+                                    place on a baking sheet.
                             </li>
-                            <li>
+                            <li class="checkbox">
                                 <input type="checkbox" id="step11" />
-                                <label for="step2"
-                                    >Bake at 375°F for 8-10 minutes, do not
-                                    over-bake.</label
-                                >
+                                <label for="step11" class="checkbox-custom"></label>
+                                    Bake at 375°F for 8-10 minutes, do not
+                                    over-bake.
                             </li>
-                            <li>
+                            <li class="checkbox">
                                 <input type="checkbox" id="step12" />
-                                <label for="step3"
-                                    >Cookies will be slightly doughy when
+                                <label for="step12" class="checkbox-custom"></label>
+                                    Cookies will be slightly doughy when
                                     removed from the oven, but will set as they
-                                    cool.</label
-                                >
+                                    cool.
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="checkbox">
                         <h3>4. Cool and store:</h3>
                         <ul>
-                            <li>
+                            <li class="checkbox">
                                 <input type="checkbox" id="step13" />
-                                <label for="step4"
-                                    >Thaw first: Thaw on a baking sheet at room
+                                <label for="step13" class="checkbox-custom"></label>
+                                    Thaw first: Thaw on a baking sheet at room
                                     temperature for 1-2 hours, then bake at
-                                    375°F as directed.</label
-                                >
+                                    375°F as directed.
                             </li>
-                            <li>
+                            <li class="checkbox">
                                 <input type="checkbox" id="step14" />
-                                <label for="step5"
-                                    >Bake from frozen: Preheat oven to 350°F,
+                                <label for="step14" class="checkbox-custom"></label>
+                                    Bake from frozen: Preheat oven to 350°F,
                                     place frozen dough on a sheet, and bake for
-                                    15 minutes.</label
-                                >
+                                    15 minutes.
                             </li>
-                            <li>
+                            <li class="checkbox">
                                 <input type="checkbox" id="step15" />
-                                <label for="step6"
-                                    >Cool cookies on the sheet for 5 minutes
+                                <label for="step15" class="checkbox-custom"></label>
+                                    Cool cookies on the sheet for 5 minutes
                                     before transferring to a wire rack to cool
-                                    completely.</label
-                                >
+                                    completely.
                             </li>
-                            <li>
+                            <li class="checkbox">
                                 <input type="checkbox" id="step16" />
-                                <label for="step7"
-                                    >Store in an airtight container at room
+                                <label for="step16" class="checkbox-custom"></label>
+                                    Store in an airtight container at room
                                     temperature for up to 5 days or freeze for
-                                    up to 2 months.</label
-                                >
+                                    up to 2 months.
                             </li>
                         </ul>
                     </li>
@@ -166,6 +140,7 @@
             </div>
             <div id="btn-container">
                 <button id="prev-btn">Previous</button>
+                <button id="next-btn" disabled>Done!</button>
             </div>
         </div>
         <script src="chocolateChipRecipe.js"></script>

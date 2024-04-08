@@ -5,6 +5,7 @@ const increaseButton = document.getElementById("increase-btn");
 const checkboxes = document.querySelectorAll('.checkbox input[type="checkbox"]');
 const nextButton = document.getElementById("next-btn");
 const previousButton = document.getElementById("prev-btn");
+const homeButton = document.getElementById("home-btn");
 const selectAllCheckbox = document.getElementById("select-all");
 
 function updateButtonsState() {
@@ -44,9 +45,12 @@ checkboxes.forEach(checkbox => {
 function checkCheckboxes() {
     let allChecked = true;
     checkboxes.forEach(checkbox => {
-        if (!checkbox.checked) {
+        if (!checkbox.checked && checkbox.id != "select-all") {
             allChecked = false;
         }
+        else if (checkbox.id == "select-all" && allChecked == true) {
+            checkbox.checked = true;
+        } 
     });
     nextButton.disabled = !allChecked;
 }
@@ -56,6 +60,10 @@ nextButton.addEventListener("click", () => {
 });
 
 previousButton.addEventListener("click", () => {
+    window.location.href = "mainscreen.html";
+});
+
+homeButton.addEventListener("click", () => {
     window.location.href = "mainscreen.html";
 });
 

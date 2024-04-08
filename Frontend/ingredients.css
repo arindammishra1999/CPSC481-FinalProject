@@ -22,6 +22,68 @@ body {
     padding: 20px;
 }
 
+.heart-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.heart {
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    background-image: url('heart.svg'); /* Replace 'heart.svg' with the path to your heart-shaped image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.heart:hover {
+    background-image: url('heart-green.svg'); /* Replace 'heart-green.svg' with the path to your green heart-shaped image */
+}
+
+.home-container {
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+}
+
+.home {
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    background-image: url('home.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.home:hover {
+    background-image: url('home-hovered.svg'); 
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color:black;
+    color: whitesmoke;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    right: 70%;
+    margin-left: -60px;
+}
+
+.heart:hover .tooltip {
+    visibility: visible;
+}
+
 .ingredient-list {
     flex: 1;
     padding: 20px;
