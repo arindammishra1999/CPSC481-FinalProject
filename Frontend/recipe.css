@@ -20,25 +20,27 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    border-right: 1px solid #ccc;
 }
 
 #recipe-image {
-    width: 63%;
-    max-width: 100%;
-    max-height: 100%;
+    width: 500px;
+    height: 500px;
 }
 
-
 .recipe-details {
-    margin-left: 20px; /* Add margin for spacing */
-   
-    position: relative; /* Add position relative */
-    margin-right: 20px;
+    flex: 1;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: left; 
 }
 
 .steps {
-    margin-top: 10%; /* Increase margin-top for more spacing */
+    margin-top: 0px;
+    margin-bottom: 0px;
     overflow-y: auto; /* Allow vertical scrolling */
     max-height: calc(100vh - 300px);
     list-style-type: decimal;
@@ -88,10 +90,18 @@ h2 {
     width: 70%;
     height: auto;
 }
+
 .steps li {
     list-style-type: none; /* Remove bullet points */
     margin-left: 0; /* Remove default left margin */
 }
+
+ul {
+    list-style: none;
+    padding: 0px;
+    margin-left: 50px;
+}
+
 .navigation {
     position: fixed;
     bottom: 0;
@@ -104,6 +114,11 @@ h2 {
 
 .navigation button:hover {
     background-color: #ddd;
+}
+
+button:disabled {
+    background-color: #ccc; 
+    cursor: not-allowed; 
 }
 
 #ListPara {
@@ -135,14 +150,48 @@ button {
 }
 
 .steps li label {
-    max-width: 700px; /* Adjust the maximum width as needed */
+    max-width: 1000px; /* Adjust the maximum width as needed */
     display: inline-block;
     word-wrap: break-word;
 }
 
-.steps li input[type="checkbox"] {
-    vertical-align: top;
-    margin-top: 1.2%;
+.checkbox {
+    margin-bottom: 10px;
+}
+
+.checkbox label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-custom {
+    display: inline-block;
+    width: 10px;
+    height: 10px; 
+    border: 1px solid #000;
+    position: relative;
+    margin-right: 10px;
+}
+
+.checkbox-custom::after {
+    content: '';
+    width: 8px; 
+    height: 16px;
+    border: solid #0a9c00;
+    border-width: 0 2px 2px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-25%, -85%) rotate(45deg);
+    opacity: 0;
+}
+
+.checkbox input[type="checkbox"]:checked + .checkbox-custom::after {
+    opacity: 1;
 }
 
 /* Add styles for the heart button */
@@ -157,14 +206,36 @@ button {
     border: none;
     width: 40px;
     height: 40px;
-    background-image: url('/Frontend/heart.svg'); /* Replace 'heart.svg' with the path to your heart-shaped image */
+    background-image: url('heart.svg'); /* Replace 'heart.svg' with the path to your heart-shaped image */
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
 }
 
 .heart:hover {
-    background-image: url('/Frontend/heart-green.svg'); /* Replace 'heart-green.svg' with the path to your green heart-shaped image */
+    background-image: url('heart-green.svg'); /* Replace 'heart-green.svg' with the path to your green heart-shaped image */
+}
+
+.home-container {
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+}
+
+.home {
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    background-image: url('home.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.home:hover {
+    background-image: url('home-hovered.svg'); 
 }
 
 /* Add styles for the tooltip */
