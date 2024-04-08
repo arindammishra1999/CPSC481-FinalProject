@@ -2,6 +2,7 @@ const checkboxes = document.querySelectorAll('.steps input[type="checkbox"]');
 const previousButton = document.getElementById("prev-btn");
 const nextButton = document.getElementById("next-btn");
 const homeButton = document.getElementById("home-btn");
+const favoriteButton = document.getElementById("favorite-btn");
 
 checkboxes.forEach((checkbox, index) => {
     checkbox.addEventListener("change", () => {
@@ -41,8 +42,6 @@ previousButton.addEventListener("click", () => {
 homeButton.addEventListener("click", () => {
     window.location.href = "mainscreen.html";
 });
-
-const favoriteButton = document.getElementById("favorite-btn");
 
 favoriteButton.addEventListener("click", toggleFavorite);
 
