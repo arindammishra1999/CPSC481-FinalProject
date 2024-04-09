@@ -15,21 +15,34 @@
             <input type="text" placeholder="Search" />
             <button>Search</button>
         </div>
-        <div class="filter-options">
-            <input type="checkbox" id="dessert" name="category" />
-            <label for="dessert">Dessert</label>
-            <input type="checkbox" id="bread" name="category" />
-            <label for="bread">Bread</label>
-            <input type="checkbox" id="breakfast" name="category" />
-            <label for="breakfast">Breakfast</label>
-        </div>
         <button class="filter">Filter</button>
+        <div class="filter-options">
+            <ul>
+                <li class="checkbox"><input type="checkbox" id="dessert"><label for="dessert" class="checkbox-custom"></label> Dessert</li>
+                <li class="checkbox"><input type="checkbox" id="bread"><label for="bread" class="checkbox-custom"></label> Bread</li>
+                <li class="checkbox"><input type="checkbox" id="breakfast"><label for="breakfast" class="checkbox-custom"></label> Breakfast</li>
+            </ul>
+        </div>
     </header>
     <main>
-        <div class="recipe-card" data-category="dessert">
+        <div class="recipe-card" data-category="dessert" title="chocolatechip">
             <img src="1.jpeg" alt="Recipe image" />
             <h2>Chocolate Chip Cookies</h2>
-            <p>This is the best chocolate chip cookies recipe ever! No funny ingredients, no chilling time, etc...</p>
+            <p>This is the best chocolate chip cookies recipe ever - buttery, slightly doughy, & so good. So easy with no weird ingredients or chilling!</p>
+        </div>
+        <div class="recipe-card" data-category="bread" title="bananabread">
+            <img src="bananabread.jpg" alt="Recipe image" />
+            <h2>Banana Bread</h2>
+            <p>With its moist texture, banana and brown sugar flavors, and super soft crumb, this is the best ever banana bread recipe.</p>
+        </div><div class="recipe-card" data-category="breakfast" title="scrambledeggs">
+            <img src="scrambledeggs.jpg" alt="Recipe image" />
+            <h2>Scrambled Eggs</h2>
+            <p>Learn how to make scrambled eggs! With this 5-ingredient recipe, they come out soft, creamy, and flavorful every time. An easy, delicious breakfast.</p>
+        </div>
+        <div class="recipe-card" data-category="breakfast" title="pancakes">
+            <img src="pancakes.jpg" alt="Recipe image" />
+            <h2>Pancakes</h2>
+            <p>Perfect pancakes are easier to make than you think. This pancake recipe produces thick, fluffy, and all-around delicious pancakes with just a few ingredients that are probably already in your kitchen (and it's so much better than the boxed stuff).</p>
         </div>
         <div class="recipe-card" data-category="bread">
             <img src="2.jpeg" alt="Recipe image" />
@@ -43,28 +56,54 @@
         </div>
     </main>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const checkboxes = document.querySelectorAll('.filter-options input[type=checkbox]');
-            checkboxes.forEach(box => {
-                box.addEventListener('change', filterRecipes);
-            });
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButton = document.querySelector('.filter');
+        const filterOptions = document.querySelector('.filter-options');
+        const checkboxes = document.querySelectorAll('.filter-options input[type=checkbox]');
+        const recipeCards = document.querySelectorAll('.recipe-card');
 
-            function filterRecipes() {
-                const checkedCategories = Array.from(checkboxes)
-                    .filter(i => i.checked)
-                    .map(i => i.id);
-                const recipes = document.querySelectorAll('.recipe-card');
-
-                recipes.forEach(card => {
-                    const category = card.dataset.category;
-                    if (checkedCategories.includes(category) || checkedCategories.length === 0) {
-                        card.style.display = '';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
+        filterButton.addEventListener('click', function() {
+            if (filterOptions.style.display === 'none' || filterOptions.style.display === '') {
+                filterOptions.style.display = 'flex';
+            } else {
+                filterOptions.style.display = 'none';
             }
         });
+
+        checkboxes.forEach(box => {
+            box.addEventListener('change', filterRecipes);
+        });
+
+        recipeCards.forEach(card => {
+            card.addEventListener('click', function() {
+                // Get the title of the clicked recipe card
+                const title = card.getAttribute('title');
+                
+                // Determine the destination URL based on the title
+                let destinationURL;
+                destinationURL = title + '.html';
+
+                // Redirect to the destination URL
+                window.location.href = destinationURL;
+            });
+        });
+
+        function filterRecipes() {
+            const checkedCategories = Array.from(checkboxes)
+                .filter(i => i.checked)
+                .map(i => i.id);
+            const recipes = document.querySelectorAll('.recipe-card');
+
+            recipes.forEach(card => {
+                const category = card.dataset.category;
+                if (checkedCategories.includes(category) || checkedCategories.length === 0) {
+                    card.style.display = 'block'; // Show the card
+                } else {
+                    card.style.display = 'none'; // Hide the card
+                }
+            });
+        }
+    });
     </script>
 </body>
 </html>
