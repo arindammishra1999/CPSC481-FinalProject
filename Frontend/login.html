@@ -41,12 +41,9 @@
                         data-onsuccess="onSignIn"
                         data-scope="profile"
                     ></div>
-                    <button
-                        type="button"
-                        id="guestButton"
-                        onclick="loginAsGuest()"
-                    >
+                    <button type="button" id="guestButton" onclick="loginAsGuest()">
                         Log in as Guest
+                        <span class="tooltip">Guest users cannot use certain app functionalities. Please sign up/log-in to get full access</span>
                     </button>
                 </div>
             </form>

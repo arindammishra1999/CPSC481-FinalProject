@@ -72,7 +72,7 @@ body {
 .tooltip {
     visibility: hidden;
     width: 120px;
-    background-color:black;
+    background-color:rgb(110, 110, 110);;
     color: whitesmoke;
     text-align: center;
     border-radius: 6px;
@@ -227,7 +227,7 @@ label[for="select-all"] {
     top: calc(100% - 70px);
     left: 94%;
     transform: translateX(-50%);
-    background-color: black;
+    background-color: rgb(110, 110, 110);
     color: white;
     padding: 5px;
     border-radius: 5px;
