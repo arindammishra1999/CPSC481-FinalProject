@@ -18,6 +18,18 @@ h1 {
     margin-bottom: 0;
 }
 
+ul {
+    list-style: none;
+    padding: 0px;
+}
+
+li {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 17px;
+    text-align: left;
+}
+
 .search-bar {
     display: flex;
     align-items: center;
@@ -46,16 +58,69 @@ h1 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+
 }
 
 .filter-options {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: absolute; /* or fixed */
+    top: 50px; /* Adjust the top value according to your design */
+    right: 100px; /* Adjust the right value according to your design */
+    background-color: #ffffff; /* Ensure a background color for contrast */
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
 }
 
-.filter-options label {
-    margin: 0 10px;
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.checkbox {
+    margin-bottom: 5px;
+}
+
+.checkbox label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-custom {
+    display: inline-block;
+    width: 10px;
+    height: 10px; 
+    border: 1px solid #000;
+    position: relative;
+    margin-right: 10px;
+}
+
+.checkbox-custom::after {
+    content: '';
+    width: 8px; 
+    height: 16px;
+    border: solid #0a9c00;
+    border-width: 0 2px 2px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-25%, -85%) rotate(45deg);
+    opacity: 0;
+}
+
+.checkbox input[type="checkbox"]:checked + .checkbox-custom::after {
+    opacity: 1;
 }
 
 main {

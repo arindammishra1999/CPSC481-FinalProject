@@ -15,15 +15,14 @@
             <input type="text" placeholder="Search" />
             <button>Search</button>
         </div>
-        <div class="filter-options">
-            <input type="checkbox" id="dessert" name="category" />
-            <label for="dessert">Dessert</label>
-            <input type="checkbox" id="bread" name="category" />
-            <label for="bread">Bread</label>
-            <input type="checkbox" id="breakfast" name="category" />
-            <label for="breakfast">Breakfast</label>
-        </div>
         <button class="filter">Filter</button>
+        <div class="filter-options">
+            <ul>
+                <li class="checkbox"><input type="checkbox" id="dessert"><label for="dessert" class="checkbox-custom"></label> Dessert</li>
+                <li class="checkbox"><input type="checkbox" id="bread"><label for="bread" class="checkbox-custom"></label> Bread</li>
+                <li class="checkbox"><input type="checkbox" id="breakfast"><label for="breakfast" class="checkbox-custom"></label> Breakfast</li>
+            </ul>
+        </div>
     </header>
     <main>
         <div class="recipe-card" data-category="dessert">
@@ -44,27 +43,38 @@
     </main>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const checkboxes = document.querySelectorAll('.filter-options input[type=checkbox]');
-            checkboxes.forEach(box => {
-                box.addEventListener('change', filterRecipes);
-            });
+        const filterButton = document.querySelector('.filter');
+        const filterOptions = document.querySelector('.filter-options');
+        const checkboxes = document.querySelectorAll('.filter-options input[type=checkbox]');
 
-            function filterRecipes() {
-                const checkedCategories = Array.from(checkboxes)
-                    .filter(i => i.checked)
-                    .map(i => i.id);
-                const recipes = document.querySelectorAll('.recipe-card');
-
-                recipes.forEach(card => {
-                    const category = card.dataset.category;
-                    if (checkedCategories.includes(category) || checkedCategories.length === 0) {
-                        card.style.display = '';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
+        filterButton.addEventListener('click', function() {
+            if (filterOptions.style.display === 'none' || filterOptions.style.display === '') {
+                filterOptions.style.display = 'flex';
+            } else {
+                filterOptions.style.display = 'none';
             }
         });
+
+        checkboxes.forEach(box => {
+            box.addEventListener('change', filterRecipes);
+        });
+
+        function filterRecipes() {
+            const checkedCategories = Array.from(checkboxes)
+                .filter(i => i.checked)
+                .map(i => i.id);
+            const recipes = document.querySelectorAll('.recipe-card');
+
+            recipes.forEach(card => {
+                const category = card.dataset.category;
+                if (checkedCategories.includes(category) || checkedCategories.length === 0) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    });
     </script>
 </body>
 </html>
