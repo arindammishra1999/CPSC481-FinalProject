@@ -242,7 +242,6 @@ button {
     background-image: url('home-hovered.svg'); 
 }
 
-/* Add styles for the tooltip */
 .tooltip {
     visibility: hidden;
     width: 120px;
