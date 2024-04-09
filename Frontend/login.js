@@ -1,4 +1,5 @@
-// login.js
+const guestButton = document.getElementById("guestButton");
+const tooltip = guestButton.querySelector('.tooltip');
 
 function loginUser() {
     var username = document.getElementById("username").value;
@@ -15,7 +16,7 @@ function loginUser() {
             );
             if (user) {
                 console.log("User should be logged in");
-                window.location.href = "recipe.html"; // Redirect to homepage if login successful
+                window.location.href = "mainscreen.html"; // Redirect to homepage if login successful
             } else {
                 alert("Invalid username or password");
             }
@@ -23,6 +24,11 @@ function loginUser() {
         .catch((error) => {
             console.error("Error:", error);
         });
+}
+
+function loginAsGuest() {
+                window.location.href = "mainscreen.html";
+            
 }
 
 document.querySelector(".login-form").addEventListener("submit", function (e) {

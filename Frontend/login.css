@@ -91,3 +91,22 @@ button {
 button:hover {
     background-color: #3c773e;
 }
+
+.tooltip {
+    visibility: hidden;
+    width: 150px;
+    background-color: rgb(110, 110, 110);
+    color: whitesmoke;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 89%;
+    right: 35%;
+    margin-left: -60px;
+}
+
+#guestButton:hover .tooltip {
+    visibility: visible;
+}
