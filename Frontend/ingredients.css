@@ -84,6 +84,7 @@ body {
     margin-left: -60px;
 }
 
+
 .heart:hover .tooltip {
     visibility: visible;
 }
@@ -235,20 +236,5 @@ label[for="select-all"] {
     white-space: nowrap;
 }
 
-.home-container::after {
-    content: "Return to recipe list";
-    position: absolute;
-    top: calc(100% - 840px);
-    left: -10%;
-    background-color: rgb(110, 110, 110); /* Background color */
-    color: white;
-    padding: 5px;
-    border-radius: 6px;
-    font-size: 14px;
-    white-space: nowrap;
-    visibility: hidden; /* Initially hidden */
-}
 
-.home-container:hover::after {
-    visibility: visible; /* Show on hover */
-}
+
