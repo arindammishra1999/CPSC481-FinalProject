@@ -8,6 +8,7 @@ const previousButton = document.getElementById("prev-btn");
 const homeButton = document.getElementById("home-btn");
 const selectAllCheckbox = document.getElementById("select-all");
 const favoriteButton = document.getElementById("favorite-btn");
+const tooltip = favoriteButton.querySelector('.tooltip');
 
 function updateButtonsState() {
     decreaseButton.disabled = quantity == 0.25;
@@ -72,6 +73,11 @@ favoriteButton.addEventListener("click", toggleFavorite);
 
 function toggleFavorite() {
     favoriteButton.classList.toggle("favorite");
+    if (favoriteButton.classList.contains('favorite')) {
+        tooltip.textContent = 'Remove recipe from favorites';
+    } else {
+        tooltip.textContent = 'Add recipe to favorites';
+    }
 }
 
 function updateIngredientQuantities() {

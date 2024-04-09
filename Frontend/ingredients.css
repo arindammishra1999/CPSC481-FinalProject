@@ -115,12 +115,25 @@ li {
     margin-bottom: 10px;
 }
 
+.checkbox-select-all {
+    margin-top: 20px;
+}
+
 .checkbox label {
     display: inline-block;
     cursor: pointer;
 }
 
+.checkbox-select-all label {
+    display: inline-block;
+    cursor: pointer;
+}
+
 .checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-select-all input[type="checkbox"] {
     display: none;
 }
 
@@ -147,6 +160,10 @@ li {
 }
 
 .checkbox input[type="checkbox"]:checked + .checkbox-custom::after {
+    opacity: 1;
+}
+
+.checkbox-select-all input[type="checkbox"]:checked + .checkbox-custom::after {
     opacity: 1;
 }
 
@@ -198,4 +215,22 @@ input[type="number"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+}
+
+label[for="select-all"] {
+    text-align: center;
+}
+
+#next-btn:disabled:hover::after {
+    content: "Check all ingredients to proceed";
+    position: absolute;
+    top: calc(100% - 70px);
+    left: 94%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
 }
