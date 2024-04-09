@@ -3,6 +3,7 @@ const previousButton = document.getElementById("prev-btn");
 const nextButton = document.getElementById("next-btn");
 const homeButton = document.getElementById("home-btn");
 const favoriteButton = document.getElementById("favorite-btn");
+const tooltip = favoriteButton.querySelector('.tooltip');
 
 checkboxes.forEach((checkbox, index) => {
     checkbox.addEventListener("change", () => {
@@ -43,6 +44,11 @@ favoriteButton.addEventListener("click", toggleFavorite);
 
 function toggleFavorite() {
     favoriteButton.classList.toggle("favorite");
+    if (favoriteButton.classList.contains('favorite')) {
+        tooltip.textContent = 'Remove recipe from favorites';
+    } else {
+        tooltip.textContent = 'Add recipe to favorites';
+    }
 }
 
 homeButton.addEventListener("click", () => {
