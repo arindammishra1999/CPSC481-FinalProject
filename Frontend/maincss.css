@@ -127,7 +127,7 @@ main {
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: space-evenly;
 }
 
 .recipe-card {
@@ -135,7 +135,6 @@ main {
     margin-bottom: 20px;
     box-shadow: 0 1px 3px #000000;
     border-radius: 5px;
-    margin: 30px;
 }
 
 .recipe-card img {
