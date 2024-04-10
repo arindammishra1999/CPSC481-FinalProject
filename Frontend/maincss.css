@@ -27,6 +27,7 @@ h4 {
 ul {
     list-style: none;
     padding: 0px;
+    display: flex;
 }
 
 li {
@@ -74,7 +75,7 @@ li {
     background-color: #ffffff; /* Ensure a background color for contrast */
     padding: 10px;
     border: 1px solid #000000;
-    border-radius: 5px;
+    border-radius: 50px;
     display: none;
     flex-direction: column;
 }
@@ -92,6 +93,10 @@ li {
 
 .checkbox {
     margin-bottom: 5px;
+}
+
+.filter-title {
+    font-weight: bold;
 }
 
 .checkbox label {

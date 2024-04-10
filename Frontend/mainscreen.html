@@ -20,63 +20,72 @@
         <button class="filter">Filter</button>
         <div class="filter-options">
             <ul>
-                <li class="checkbox"><input type="checkbox" id="dessert"><label for="dessert" class="checkbox-custom"></label> Dessert</li>
-                <li class="checkbox"><input type="checkbox" id="bread"><label for="bread" class="checkbox-custom"></label> Bread</li>
-                <li class="checkbox"><input type="checkbox" id="breakfast"><label for="breakfast" class="checkbox-custom"></label> Breakfast</li>
-                <li class="checkbox"><input type="checkbox" id="burger"><label for="burger" class="checkbox-custom"></label> Burger</li>
-
+                <li class="filter-title">Expertise Level</li>
+                <li class="checkbox"><input type="checkbox" id="beginner"><label for="beginner" class="checkbox-custom"></label> Beginner</li>
+                <li class="checkbox"><input type="checkbox" id="intermediate"><label for="intermediate" class="checkbox-custom"></label> Intermediate</li>
+                <li class="checkbox"><input type="checkbox" id="pro"><label for="pro" class="checkbox-custom"></label> Pro</li>
+            </ul>
+            <ul>
+                <li class="filter-title">Preference</li>
+                <li class="checkbox"><input type="checkbox" id="vegetarian"><label for="vegetarian" class="checkbox-custom"></label> Vegetarian</li>
+                <li class="checkbox"><input type="checkbox" id="nonvegetarian"><label for="nonvegetarian" class="checkbox-custom"></label> Non-vegetarian</li>
+            </ul>
+            <ul>
+                <li class="filter-title">Prep Time</li>
+                <li class="checkbox"><input type="checkbox" id="lessthan30"><label for="lessthan30" class="checkbox-custom"></label> < 30 mins</li>
+                <li class="checkbox"><input type="checkbox" id="morethan30"><label for="morethan30" class="checkbox-custom"></label> > 30 mins</li>
             </ul>
         </div>
     </header>
     <main>
-        <div class="recipe-card" data-category="dessert" title="chocolatechip">
+        <div class="recipe-card" data-category="intermediate" title="chocolatechip">
             <img src="1.jpeg" alt="Recipe image" />
             <h2>Chocolate Chip Cookies</h2>
             <h4>Prep time: 45 minutes</h4>
             <p>This is the best chocolate chip cookies recipe ever - buttery, slightly doughy, & so good. So easy with no weird ingredients or chilling!</p>
         </div>
-        <div class="recipe-card" data-category="bread" title="bananabread">
+        <div class="recipe-card" data-category="intermediate" title="bananabread">
             <img src="bananabread.jpg" alt="Recipe image" />
             <h2>Banana Bread</h2>
             <h4>Prep time: 60 minutes</h4>
             <p>With its moist texture, banana and brown sugar flavors, and super soft crumb, this is the best ever banana bread recipe.</p>
-        </div><div class="recipe-card" data-category="breakfast" title="scrambledeggs">
+        </div><div class="recipe-card" data-category="beginner" title="scrambledeggs">
             <img src="scrambledeggs.jpg" alt="Recipe image" />
             <h2>Scrambled Eggs</h2>
             <h4>Prep time: 10 minutes</h4>
             <p>Learn how to make scrambled eggs! With this 5-ingredient recipe, they come out soft, creamy, and flavorful every time. An easy, delicious breakfast.</p>
         </div>
-        <div class="recipe-card" data-category="breakfast" title="pancakes">
+        <div class="recipe-card" data-category="beginner" title="pancakes">
             <img src="pancakes.jpg" alt="Recipe image" />
             <h2>Pancakes</h2>
             <h4>Prep time: 15 minutes</h4>
             <p>Perfect pancakes are easier to make than you think. This pancake recipe produces thick, fluffy, and all-around delicious pancakes with just a few ingredients that are probably already in your kitchen (and it's so much better than the boxed stuff).</p>
         </div>
-        <div class="recipe-card" data-category="bread">
+        <div class="recipe-card" data-category="pro">
             <img src="2.jpeg" alt="Recipe image" />
             <h2>Zucchini Banana Bread</h2>
             <h4>Prep time: 55 minutes</h4>
             <p>This easy zucchini banana bread is studded with chocolate chips and packed with flavor...</p>
         </div>
-        <div class="recipe-card" data-category="breakfast">
+        <div class="recipe-card" data-category="beginner">
             <img src="11.jpeg" alt="Recipe image" />
             <h2>French Toast</h2>
             <h4>Prep time: 20 minutes</h4>
             <p>There's rarely a day this fabulous French toast recipe doesn't make a perfect breakfast...</p>
         </div>
-        <div class="recipe-card" data-category="burger" title="sallyshamclogger">
+        <div class="recipe-card" data-category="pro" title="sallyshamclogger">
             <img src="20.jpeg" alt="Recipe image" />
             <h2>Sally's Ham Clogger</h2>
             <h4>Prep time: 45 minutes</h4>
             <p>This burger is so greasy it'll be sure to clog your arteries. With a juicy patty, dripping with cheese, it's not for the faint-hearted!</p>
         </div>
-        <div class="recipe-card" data-category="salad" title="crunchycaesarsalad">
+        <div class="recipe-card" data-category="beginner" title="crunchycaesarsalad">
             <img src="30.jpeg" alt="Recipe image" />
             <h2>Deconstructed Salad</h2>
             <h4>Prep time: 20 minutes</h4>
             <p>This luxury deconstructed salad a la mode is the pinnacle of food design. This Caesar salad combines fresh romaine lettuce, avocado, and a zesty dressing for the perfect side dish.</p>
         </div>
-        <div class="recipe-card" data-category="dessert" title="lemonmeringuepie">
+        <div class="recipe-card" data-category="pro" title="lemonmeringuepie">
             <img src="40.webp" alt="Recipe image" />
             <h2>Lemon Meringue Pie</h2>
             <h4>Prep time: 55 minutes</h4>
