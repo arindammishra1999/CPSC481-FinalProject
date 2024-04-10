@@ -237,3 +237,16 @@ main {
     right: 0%;
     margin-left: -60px;
 }
+
+button#goBackBtn {
+    position: fixed;
+    bottom: 20px;
+    left: 8.5%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #479442;
+    color: black;
+    border: none;
+    border-radius: 5px;
+}
