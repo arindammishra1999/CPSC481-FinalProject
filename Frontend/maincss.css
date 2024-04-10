@@ -60,12 +60,12 @@ li {
 }
 
 .filter {
-    background-color: #479442;
     padding: 10px 20px;
+    background-color: #479442;
+    color: 479442;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-
 }
 
 .filter-options {
@@ -146,6 +146,7 @@ main {
     margin-bottom: 20px;
     box-shadow: 0 1px 3px #000000;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .recipe-card img {
@@ -176,7 +177,7 @@ main {
     }
 }
 
-.tooltip {
+#search .tooltip {
     visibility: hidden;
     width: 150px;
     background-color: rgb(110, 110, 110);
@@ -195,3 +196,21 @@ main {
     visibility: visible;
 }
 
+.filter:hover .tooltip {
+    visibility: visible;
+}
+
+.filter .tooltip {
+    visibility: hidden;
+    width: 150px;
+    background-color: rgb(110, 110, 110);
+    color: whitesmoke;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 13%;
+    right: 0%;
+    margin-left: -60px;
+}
