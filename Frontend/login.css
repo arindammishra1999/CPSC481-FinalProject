@@ -69,7 +69,10 @@ body {
 }
 
 #guestButton {
-    margin-top: 0%;
+    margin-top: 4%;
+    margin-right: 5%;
+    width: 120px; /* Adjust width as needed */
+    height: 43px; /* Adjust height as needed */
 }
 
 p {
@@ -109,4 +112,21 @@ button:hover {
 
 #guestButton:hover .tooltip {
     visibility: visible;
+}
+
+.signIn {
+    padding: 10px 20px;
+    margin: 0 auto;
+    width: 120px; /* Adjust width as needed */
+    height: 60px; /* Adjust height as needed */
+}
+
+.signInContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.signInContainer:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
 }

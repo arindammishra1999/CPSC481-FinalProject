@@ -36,27 +36,18 @@
                 <button type="submit">Login</button>
                 <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
                 <div class="g-signin-container">
-                    <div
-                        class="g-signin2"
-                        data-onsuccess="onSignIn"
-                        data-scope="profile"
-                    ></div>
+                    <div class="signInContainer">
+                        <img src="signIn.png" alt="Sign In button" class="signIn" />
+                        <span class="tooltip">This functionality is a work in progress</span>
+                    </div>
+
                     <button type="button" id="guestButton" onclick="loginAsGuest()">
-                        Log in as Guest
+                        Log in as a Guest
                         <span class="tooltip">Guest users cannot use certain app functionalities. Please sign up/log-in to get full access</span>
                     </button>
                 </div>
             </form>
         </div>
         <script src="login.js" defer></script>
-        <script>
-            function onSignIn(googleUser) {
-                var profile = googleUser.getBasicProfile();
-                console.log("ID: " + profile.getId()); // Do something with the user's ID
-                console.log("Name: " + profile.getName()); // Do something with the user's name
-                console.log("Image URL: " + profile.getImageUrl()); // Do something with the user's image URL
-                console.log("Email: " + profile.getEmail()); // Do something with the user's email
-            }
-        </script>
     </body>
 </html>
