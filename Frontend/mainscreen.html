@@ -118,7 +118,13 @@
                 
                 // Determine the destination URL based on the title
                 let destinationURL;
-                destinationURL = title + '.html';
+
+                // Check if the title exists and if the corresponding HTML file exists
+                if (title && !['sallyshamclogger', 'crunchycaesarsalad', 'lemonmeringuepie'].includes(title)) {
+                    destinationURL = title + '.html';
+                } else {
+                    destinationURL = 'workInProgress.html';
+                }
 
                 // Redirect to the destination URL
                 window.location.href = destinationURL;
