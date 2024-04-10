@@ -1,0 +1,29 @@
+body {
+    background-color: #f6ead4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Make the body fill the entire viewport height */
+}
+
+.container {
+    text-align: center; /* Center the text horizontally */
+}
+
+h1 {
+    margin-left: 10%;
+    max-width: 80%; /* Limit the width of the text to 80% of the viewport width */
+}
+
+button {
+    margin-top: 20px; /* Add some space between the heading and the button */
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #479442;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
