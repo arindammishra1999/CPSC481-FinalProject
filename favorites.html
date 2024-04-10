@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites</title>
+    <link rel="stylesheet" href="maincss.css">
+</head>
+<body>
+    <header>
+        <div class="search-bar">
+            <img src="10.png" alt="Recipe image" />
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search" />
+            <button id = "search">Search
+                <span class="tooltip"> This feature is a Work in progress</span>
+            </button>
+        </div>
+        <a href="favorites.html" class="favorites-button">Favorites</a>
+        <button class="filter">Filter
+            <span class="tooltip">Preference and Prep Time are Non-functional</span>
+        </button>
+        <div class="filter-options">
+            <ul>
+                <li class="filter-title">Expertise Level</li>
+                <li class="checkbox"><input type="checkbox" id="beginner"><label for="beginner" class="checkbox-custom"></label> Beginner</li>
+                <li class="checkbox"><input type="checkbox" id="intermediate"><label for="intermediate" class="checkbox-custom"></label> Intermediate</li>
+                <li class="checkbox"><input type="checkbox" id="pro"><label for="pro" class="checkbox-custom"></label> Pro</li>
+            </ul>
+            <ul>
+                <li class="filter-title">Preference</li>
+                <li class="checkbox"><input type="checkbox" id="vegetarian"><label for="vegetarian" class="checkbox-custom"></label> Vegetarian</li>
+                <li class="checkbox"><input type="checkbox" id="nonvegetarian"><label for="nonvegetarian" class="checkbox-custom"></label> Non-vegetarian</li>
+            </ul>
+            <ul>
+                <li class="filter-title">Prep Time</li>
+                <li class="checkbox"><input type="checkbox" id="lessthan30"><label for="lessthan30" class="checkbox-custom"></label> < 30 mins</li>
+                <li class="checkbox"><input type="checkbox" id="morethan30"><label for="morethan30" class="checkbox-custom"></label> > 30 mins</li>
+            </ul>
+        </div>
+    </header>
+    <header>
+        <h1>Favorites</h1>
+    </header>
+    <main>
+        <div class="recipe-card" data-category="dessert" title="chocolatechip">
+            <img src="1.jpeg" alt="Recipe image" />
+            <h2>Chocolate Chip Cookies</h2>
+            <h4>Prep time: 45 minutes</h4>
+            <p>This is the best chocolate chip cookies recipe ever...</p>
+        </div>
+        <div class="recipe-card" data-category="bread" title="bananabread">
+            <img src="bananabread.jpg" alt="Recipe image" />
+            <h2>Banana Bread</h2>
+            <h4>Prep time: 60 minutes</h4>
+            <p>With its moist texture, banana and brown sugar flavors...</p>
+        </div>
+        <div class="recipe-card" data-category="breakfast" title="pancakes">
+            <img src="pancakes.jpg" alt="Recipe image" />
+            <h2>Pancakes</h2>
+            <h4>Prep time: 15 minutes</h4>
+            <p>Perfect pancakes are easier to make than you think...</p>
+        </div>
+    </main>
+</body>
+</html>
