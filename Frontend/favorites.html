@@ -9,11 +9,14 @@
 <body>
     <header>
         <div class="search-bar">
-            <img src="10.png" alt="Recipe image" />
+            <!-- Make the logo clickable and redirect to mainscreen.html -->
+            <a href="mainscreen.html">
+                <img src="10.png" alt="Recipe image" />
+            </a>
         </div>
         <div class="search-bar">
             <input type="text" placeholder="Search" />
-            <button id = "search">Search
+            <button id="search">Search
                 <span class="tooltip"> This feature is a Work in progress</span>
             </button>
         </div>
@@ -63,5 +66,61 @@
             <p>Perfect pancakes are easier to make than you think...</p>
         </div>
     </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButton = document.querySelector('.filter');
+            const filterOptions = document.querySelector('.filter-options');
+            const checkboxes = document.querySelectorAll('.filter-options input[type=checkbox]');
+            const recipeCards = document.querySelectorAll('.recipe-card');
+    
+            filterButton.addEventListener('click', function() {
+                if (filterOptions.style.display === 'none' || filterOptions.style.display === '') {
+                    filterOptions.style.display = 'flex';
+                } else {
+                    filterOptions.style.display = 'none';
+                }
+            });
+    
+            checkboxes.forEach(box => {
+                box.addEventListener('change', filterRecipes);
+            });
+    
+            recipeCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    // Get the title of the clicked recipe card
+                    const title = card.getAttribute('title');
+                    
+                    // Determine the destination URL based on the title
+                    let destinationURL;
+    
+                    // Check if the title exists and if the corresponding HTML file exists
+                    if (title && !['sallyshamclogger', 'crunchycaesarsalad', 'lemonmeringuepie'].includes(title)) {
+                        destinationURL = title + '.html';
+                    } else {
+                        destinationURL = 'workInProgress.html';
+                    }
+    
+                    // Redirect to the destination URL
+                    window.location.href = destinationURL;
+                });
+            });
+    
+            function filterRecipes() {
+                const checkedCategories = Array.from(checkboxes)
+                    .filter(i => i.checked)
+                    .map(i => i.id);
+                const recipes = document.querySelectorAll('.recipe-card');
+    
+                recipes.forEach(card => {
+                    const category = card.dataset.category;
+                    if (checkedCategories.includes(category) || checkedCategories.length === 0) {
+                        card.style.display = 'block'; // Show the card
+                    } else {
+                        card.style.display = 'none'; // Hide the card
+                    }
+                });
+            }
+        });
+        </script>
 </body>
 </html>
