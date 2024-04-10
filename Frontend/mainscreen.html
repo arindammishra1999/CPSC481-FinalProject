@@ -17,7 +17,8 @@
                 <span class="tooltip"> This feature is a Work in progress</span>
             </button>
         </div>
-        <a href="favorites.html" class="favorites-button">Favorites</a>
+        <div class="fav-filter">
+        <button id="fav-btn" class="favorites-button">My Favorites</button>
         <button class="filter">Filter
             <span class="tooltip">Preference and Prep Time are Non-functional</span>
         </button>
@@ -38,6 +39,7 @@
                 <li class="checkbox"><input type="checkbox" id="lessthan30"><label for="lessthan30" class="checkbox-custom"></label> < 30 mins</li>
                 <li class="checkbox"><input type="checkbox" id="morethan30"><label for="morethan30" class="checkbox-custom"></label> > 30 mins</li>
             </ul>
+        </div>
         </div>
     </header>
     <main>
@@ -98,6 +100,7 @@
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const filterButton = document.querySelector('.filter');
+        const favoritesButton = document.getElementById('fav-btn');
         const filterOptions = document.querySelector('.filter-options');
         const checkboxes = document.querySelectorAll('.filter-options input[type=checkbox]');
         const recipeCards = document.querySelectorAll('.recipe-card');
@@ -149,6 +152,10 @@
                 }
             });
         }
+
+        favoritesButton.addEventListener("click", () => {
+            window.location.href = "favorites.html";
+        });
     });
     </script>
 </body>
